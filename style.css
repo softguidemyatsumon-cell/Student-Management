@@ -1,0 +1,18 @@
+/* body {
+      background-color: hwb(130 7% 35%);
+    } */
+    .login-box {
+      max-width: 400px;
+      width: 100%;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    #main_title{
+    text-align: center;
+    background-color: #333333;
+    color: #fff;
+    padding: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
