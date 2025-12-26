@@ -9,6 +9,7 @@ $students = $conn->query("SELECT * FROM student");
 <head>
     <title>Student Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
         body {
             min-height: 100vh;
@@ -38,14 +39,14 @@ $students = $conn->query("SELECT * FROM student");
     <ul class="nav nav-pills flex-column">
        
         <li class="nav-item mb-2">
-            <a href="dashboard.php" class="nav-link text-white">Students Dashboard</a>
+            <a href="dashboard.php" class="nav-link text-white"><i class="bi bi-speedometer2 me-2"></i>Students Dashboard</a>
         </li>
         <li class="nav-item mb-2">
-            <a href="student/student_create.php" class="nav-link text-white">Add Student</a>
+            <a href="../student/student_create.php" class="nav-link text-white"><i class="bi bi-people me-2"></i>Add Student</a>
         </li>
         
-        <li class="nav-item mt-4">
-            <a href="logout.php" class="nav-link text-danger">Logout</a>
+        <li class="nav-item mt-2">
+            <a href="../login.php" class="nav-link text-warning fw-bold"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
         </li>
     </ul>
 </div>
@@ -57,7 +58,7 @@ $students = $conn->query("SELECT * FROM student");
                 <h4>Student List</h4>
         </div>
         <div class="p-2">
-            <a href="./admin/admin_dashboard.php" class="btn btn-success">Back</a>
+            <a href="../index.php" class="btn btn-success">Back</a>
         </div>
         <div class="p-2">
             <a href="student/student_create.php" class="btn btn-success">+ Add Student</a>

@@ -1,42 +1,56 @@
 <?php
 require("db_connection.php");
 session_start();
-if(isset($_POST['login'])){
-  $username =$_POST['username'];
-  $password = $_POST['password'];
 
-  $sql = "SELECT * FROM login WHERE username = '$username' AND password ='$password'";
+$errorName = $errorPassword = $loginError = "";
 
-  $result =mysqli_query($conn,$sql);
-  $row =mysqli_fetch_array($result, MYSQLI_ASSOC);
-  if($row['role']=="admin"){
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    $_SESSION['username'] = $username;
-    $_SESSION['role'] = "admin";
-
-    header("location:admin/admin_dashboard.php");
-      
-    }else if($row['role']=="teacher"){
-    $_SESSION['username'] = $username;
-    $_SESSION['role'] = "teacher";
-
-    header("location:teacher/teacher_dashboard.php");
-
-    }else if($row['role']=="student"){
-    $_SESSION['username'] = $username;
-    $_SESSION['role'] = "student";
-
-    header("location:student/student_dashboard.php");
+    // 1. Basic Validation: Check if fields are empty
+    if (empty($username)) {
+        $errorName = "Please Fill Name Field!";
     }
-      
-}
+    if (empty($password)) {
+        $errorPassword = "Please Fill Password Field!";
+    }
 
+    // 2. Database Check (Only if fields aren't empty)
+    if (!empty($username) && !empty($password)) {
+
+        // Note: Using variables directly in SQL is prone to SQL Injection. 
+        // For a production app, use Prepared Statements.
+        $sql = "SELECT * FROM login WHERE username = '$username' AND password ='$password'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+        if ($row) { // This check fixes the "null" error
+
+            $_SESSION['username'] = $username;
+            $_SESSION['role'] = $row['role'];
+         
+            if ($row['role'] == "admin") {
+                header("location:admin/admin_dashboard.php");
+            } else if ($row['role'] == "teacher") {
+                header("location:teacher/teacher_dashboard.php");
+            } else if ($row['role'] == "student") {
+                header("location:student/student_dashboard.php");
+            }
+        } else {
+            // $loginError = "Invalid Username or Password!";
+            // echo "$loginError";
+            echo "<h6  class='alert alert-danger' role='alert'>Login Failed! Try Again</h6>";
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">  
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Responsive Login</title>
 
@@ -48,19 +62,21 @@ if(isset($_POST['login'])){
 
   </style>
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100">
 
-  <form method="post" class="login-box p-4" >
+<body class="d-flex justify-content-center align-items-center vh-100">
+   <form method="post" class="login-box p-4">
     <h2 class="text-center mb-4">Account Login</h2>
 
     <div class="mb-3">
       <label class="form-label">Username</label>
-      <input type="text" class="form-control" placeholder="Enter username" name="username" required>
+      <input type="text" class="form-control" placeholder="Enter username" name="username">
+      <span class="text-danger"><?php echo $errorName?></span>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Password</label>
-      <input type="password" class="form-control" placeholder="Enter password" name="password" required>
+      <input type="password" class="form-control" placeholder="Enter password" name="password">
+      <span class="text-danger"><?php echo $errorPassword?></span>
     </div>
 
     <button type="submit" class="btn btn-primary w-100" name="login">Login</button>
@@ -69,4 +85,5 @@ if(isset($_POST['login'])){
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </script>
+
 </html>

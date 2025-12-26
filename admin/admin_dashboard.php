@@ -27,7 +27,7 @@
     </style>
 </head>
 <body>
-<div class="sidebar bg-dark p-3">
+<div class="sidebar bg-success p-3">
     <h4 class="text-white text-center mb-4">Admin Panel</h4>
 
     <ul class="nav nav-pills flex-column">
@@ -38,20 +38,28 @@
             <a href="student/student_create.php" class="nav-link text-white"><i class="bi bi-people me-2"></i>Add Teacher</a>
         </li>
         <li class="nav-item mb-2">
-            <a href="dashboard.php" class="nav-link text-white">Students Dashboard</a>
+            <a href="dashboard.php" class="nav-link text-white"><i class="bi bi-speedometer2 me-2"></i>Students Dashboard</a>
         </li>
         <li class="nav-item mb-2">
-            <a href="student/student_create.php" class="nav-link text-white">Add Student</a>
+            <a href="student/student_create.php" class="nav-link text-white"><i class="bi bi-people me-2"></i>Add Student</a>
         </li>
         
-        <li class="nav-item mt-4">
-            <a href="logout.php" class="nav-link text-danger">Logout</a>
+        <li class="nav-item mt-2">
+            <a href="../login.php" class="nav-link text-warning fw-bold"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
         </li>
     </ul>
 </div>
 <div class="content">
 
-    <h2>Dashboard</h2>
+    <div class="d-flex">
+        <div class="p-2 w-100">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="p-2 flex-shrink-1">
+            <a href="../index.php" class="btn btn-success">Back</a>
+        </div>
+    </div>
+    
 
     <div class="row mt-4">
         <div class="col-md-3">
@@ -71,6 +79,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="row">
+
     </div>
 
 </div>
