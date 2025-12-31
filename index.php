@@ -15,17 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-    <title>Responsive Navbar</title>
+    <title>Student System</title>
 
-    <style>
-        /* Responsive image fix */
-        /* .home img {
-            height: 100vh;
-            object-fit: cover;
-        } */
-
-       
-    </style>
 </head>
 
 <body>
@@ -43,12 +34,13 @@
                         <li class="nav-item pe-lg-4">
                             <a class="nav-link fw-bold" href="#home">Home</a>
                         </li>
+                         <li class="nav-item pe-lg-4">
+                            <a class="nav-link fw-bold" href="#about">About</a>
+                        </li>
                         <li class="nav-item pe-lg-4">
                             <a class="nav-link fw-bold" href="#course">Course</a>
                         </li>
-                        <li class="nav-item pe-lg-4">
-                            <a class="nav-link fw-bold" href="#about">About</a>
-                        </li>
+                       
                         <li class="nav-item pe-lg-4">
                             <a class="nav-link fw-bold" href="#contact">Contact</a>
                         </li>
@@ -66,152 +58,249 @@
     </header>
 
         <!-- home image -->
-    <section id="home">
-        <div class="container-fluid p-0 mb-5">
-            <img src="./images/classroom.jpg" class="img-fluid w-100" alt="Student System" style="height: 90vh; object-fit: cover;">
+    <section id="home" style="margin-top: 58px;">
+        <div class="position-relative overflow-hidden" style="height: 600px;">
+            <img src="./images/classroom (1).jpg" class="img-fluid w-100 h-100 position-absolute top-0 start-0" style="object-fit:cover" alt="Student System">
         </div>
     </section>
-        <!-- course title -->
-    <section>
-        <div class="container d-flex justify-content-center">
-            <div class="row mb-5">
-                <h1 style="font-family:serif;  font-weight: bold;">OUR COURSES</h1>
-            </div>
-        </div>
-    </section>
-    <!-- course -->
-    <section id="course">
+        <!-- welcome -->
+    <section class="mb-5 mt-lg-5 mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-4">
-                    <div class="card shadow-lg" style="width: 18rem;">
-                        <img src="./images/gpt1.png" class="card-img-top" alt="Course Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Development</h5>
-                            <p class="card-text">
-                            Learn HTML, CSS, Bootstrap, and JavaScript from scratch.
-                            </p>
-                            <a href="#" class="btn btn-success">Enroll Now</a>
-                        </div>
-                    </div>
+                <div class="col-lg-6 md-12 mb-5" >
+                    <img src="./images/welcome2.jpg" alt="" style="width: 30rem; height:430px;" class="rounded shadow" >
                 </div>
+                <div class="col-lg-6 md-12 mb-5">
+                    <h3>WELCOME</h3>
 
-                <div class="col-4">
-                    <div class="card shadow-lg" style="width: 18rem;">
-                        <img src="./images/gpt1.png" class="card-img-top" alt="Course Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Development</h5>
-                            <p class="card-text">
-                            Learn HTML, CSS, Bootstrap, and JavaScript from scratch.
-                            </p>
-                            <a href="#" class="btn btn-success">Enroll Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="card shadow-lg" style="width: 18rem;">
-                        <img src="./images/gpt1.png" class="card-img-top" alt="Course Image">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Development</h5>
-                            <p class="card-text">
-                            Learn HTML, CSS, Bootstrap, and JavaScript from scratch.
-                            </p>
-                            <a href="#" class="btn btn-success">Enroll Now</a>
-                        </div>
-                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate nostrum rerum doloribus veritatis similique deleniti eius et blanditiis voluptatibus. Nam omnis cumque recusandae optio minus dolore quam delectus esse quibusdam rerum a mollitia illum reprehenderit, eius laudantium perferendis asperiores harum corporis voluptate doloremque sed tempora quos perspiciatis. Quisquam fugiat eum dicta minima dolorem reiciendis ducimus, rerum consequatur veritatis perspiciatis recusandae asperiores unde  tenetur maiores facere, cupiditate quis architecto fugit harum praesentium dicta! tenetur maiores facere, cupiditate quis architecto fugit harum praesentium dicta!</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- about title -->
-    <section>
+
+
+  <!-- about title -->
+    <section id="about">
         <div class="container d-flex justify-content-center">
             <div class="row mb-5 mt-5">
-                <h1 style="font-family:serif;  font-weight: bold;">ABOUT US</h1>
+                <h1 style="font-family:serif;  font-weight: bold; color:green;">Our Teams</h1>
             </div>
         </div>
     </section>
     <!-- about -->
-    <section id="about">
+    <section class="mb-5">
         <div class="container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quibusdam atque? Accusantium molestiae quod, ipsa exercitationem eum asperiores ex dolores provident amet omnis nulla repellat, porro voluptates iusto ad. Temporibus neque aperiam laboriosam reprehenderit quibusdam ipsam sequi aliquam quo provident hic tempora a exercitationem assumenda soluta sapiente nulla enim nihil necessitatibus minus, et aliquid explicabo? Velit incidunt saepe fugit, qui aperiam laborum, voluptatum minus, cupiditate doloremque ducimus quod sapiente sequi commodi? Accusamus ad quo maxime numquam sit architecto, porro repellendus aliquam, distinctio cupiditate blanditiis? Quisquam, eos unde. Doloribus ratione at iure, voluptas beatae harum itaque quis, molestiae dolores perspiciatis eos!</p>
+           <div class="row">
+            <div class="col-lg-4 md-12 mb-4">
+                <div style="width: 18rem;">
+                        <img src="./images/webteam.avif" class="card-img-top" alt="Course Image">                        
+                            <h5 class="ms-2">Web Development</h5>  
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint itaque labore accusantium. Possimus fuga alias nihil, expedita suscipit tefssghdjg. amet consectetur adipisicing elit.
+                            </p>                    
+                </div>
+            </div>
+            <div class="col-lg-4 md-12 mb-4">
+                   <div style="width: 18rem;">
+                        <img src="./images/microsoftteam.jpg" class="card-img-top" alt="Course Image">                        
+                            <h5 class="ms-2">Microsoft Office</h5>  
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint itaque labore accusantium. Possimus fuga alias nihil, expedita suscipit tefssghdjg. amet consectetur adipisicing elit.
+                            </p>                        
+                    </div>
+            </div>
+            <div class="col-lg-4 md-12 mb-4">
+                   <div style="width: 18rem;">
+                        <img src="./images/programmingteam.jpg" class="card-img-top" alt="Course Image">                        
+                            <h5 class="ms-2">Programming</h5>    
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint itaque labore accusantium. Possimus fuga alias nihil, expedita suscipit tefssghdjg. amet consectetur adipisicing elit.
+                            </p>    
+                    </div>
+            </div>
+           </div>
         </div>
     </section>
-    <!-- contact title -->
-    <!-- <section>
+
+    <!-- course title -->
+    <section id="course">
         <div class="container d-flex justify-content-center">
-            <div class="row mb-5 mt-5">
-                <h1 style="font-family:serif;  font-weight: bold;">CONTACT US</h1>
+            <div class="row mb-5">
+                <h1 style="font-family:serif;  font-weight: bold; color:green;">OUR COURSES</h1>
             </div>
         </div>
-    </section> -->
-    <!-- contact -->
-   <section id="contact" class="py-5">
-  <div class="container">
-     <h1 style="font-family:serif;  font-weight: bold; text-align:center">CONTACT US</h1>
-    <p class="text-center mb-5">Have questions or feedback? Reach out to us!</p>
-    
-    <div class="row justify-content-center">
-      <!-- Contact Form -->
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-              </div>
-              
-              <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-              </div>
-              
-              <div class="mb-3">
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-              </div>
-              
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Write your message" required></textarea>
-              </div>
-              
-              <button type="submit" class="btn btn-primary w-100">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
+    </section>
+    <!-- course -->
+    <section >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 md-12 mb-5">
+                    <div class="card shadow-lg" style="width: 18rem; height:400px;">
+                        <img src="./images/web1.png" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Bootstrap</li>
+                                    <li>Javascript</li>
+                                    <li>Jquery</li>
+                                    <li>PHP</li>
+                                    <li>Laravel</li>
+                                </ul>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
 
-      <!-- Contact Info -->
-      <div class="col-md-4 mt-4 mt-md-0">
-        <div class="p-4 bg-white shadow-sm rounded">
-          <h5>Get in Touch</h5>
-          <p><strong>Address:</strong> 123 Student Road, College City</p>
+                <div class="col-lg-4 md-12 mb-5">
+                    <div class="card shadow-lg" style="width: 18rem; height:400px;">
+                        <img src="./images/microsoft.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Microsoft Office</h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li>Microsoft Word</li>
+                                    <li>Powerpoint</li>
+                                    <li>Excel</li>
+                                </ul>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 md-12 mb-5">
+                    <div class="card shadow-lg" style="width: 18rem; height:400px;">
+                        <img src="./images/programming.jpg" class="card-img-top" alt="Course Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Programming</h5>
+                            <p class="card-text">
+                                  <ul>
+                                    <li>C++</li>
+                                    <li>Java</li>
+                                    <li>C#</li>
+                                    <li>Python</li>
+                                </ul>
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- contact  -->
+   <section id="contact" class="py-5">
+  <div class="container">       
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="container my-5">
+                <h3 class="mb-4">Get in Touch</h3>
+
+                    <form>                      
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        
+                        <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Address">
+                        </div>
+
+                        <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email">
+                        </div>
+
+                        <div class="mb-3">
+                        <input type="tel" class="form-control" placeholder="Phone">
+                        </div>
+
+                        <div class="mb-4">
+                        <textarea class="form-control" rows="5" placeholder="Message....."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100 py-2">
+                        Send Message
+                        </button>
+                    </form>
+            </div>
+
+        </div>
+    <!-- Contact Info -->
+      <div class="col-md-6 mt-5 mt-md-0">
+        <div class="container my-5 ">
+
+            <iframe src="https://www.google.com/maps/place/575b+Pyay+Rd,+Yangon,+Myanmar+(Burma)/@16.829347,96.1301832,18z/data=!4m15!1m8!3m7!1s0x30c194b7d6dda76b:0x112e9f151bd16bda!2s575b+Pyay+Rd,+Yangon,+Myanmar+(Burma)!3b1!8m2!3d16.8304176!4d96.1317013!16s%2Fg%2F11lly779ww!3m5!1s0x30c194b7d6dda76b:0x112e9f151bd16bda!8m2!3d16.8304176!4d96.1317013!16s%2Fg%2F11lly779ww?authuser=0&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" style="border:0; width:500px; height:300px" loading="lazy"></iframe>
+            <p><strong>Address:</strong>No.(575), Pyay Road, Kamayut Township, Yangon Myanmar.</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Email:</strong> info@student-system.com</p>
+          <!-- <h5 class="mb-4">Get in Touch</h5> -->
+          <!-- <p><strong>Address:</strong>No.(575), Pyay Road, Kamayut.</p>
           <p><strong>Phone:</strong> +1 234 567 890</p>
           <p><strong>Email:</strong> info@student-system.com</p>
           <div class="mt-3">
             <a href="#" class="btn btn-outline-primary btn-sm me-2">Facebook</a>
             <a href="#" class="btn btn-outline-info btn-sm me-2">Twitter</a>
             <a href="#" class="btn btn-outline-danger btn-sm">Instagram</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> 
 
-    <!-- footer -->
-    <footer>
+    <!--footer -->
+    <footer class="mt-5 pt-lg-5">
+                <div class="container-fluid bg-success">
+                      <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-4 md-12 mb-4">
+                    <h5 class="text-white mb-4">STUDENT SYSTEM</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quibusdam vel quo commodi sunt.</p>
+                    <a href="#contact" class=" btn btn-lg btn-warning btn-rounded px-5 py-3">Inquery <i class="fa-solid fa-envelope me-2"></i></a>
 
+                </div>
+                <div class="col-lg-4 md-12 mb-4">
+                    <h5 class="text-white mb-4">USEFUL LINKS</h5>
+                    <p>
+                        <a href="index.php" class="text-reset  text-decoration-none">Home</a>
+                    </p>
+                    <p>
+                        <a href="#about" class="text-reset  text-decoration-none">About</a>
+                    </p>
+                    <p>
+                        <a href="#contact" class="text-reset text-decoration-none">Contact</a>
+                    </p>
+                </div>
+                <div class="col-lg-4 md-12 mb-4">
+                    <h5 class="text-white mb-4">CONTACT</h5>
+                    <p>
+                        <i class="fa-solid fa-house me-2"></i>
+                        <span class="me-5">No.(575), Pyay Road, Kamayut Township,  </span>
+                        <span>Yangon Myanmar.</span>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-envelope  me-2"></i>
+                        <span>student.hr@gmail.com</span>
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone  me-2"></i>
+                        <span>+959 789321675</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+         <!-- <div class="container-fluid">
+            <div class="row d-flex justify-content-center">
+                <h6 class="text-center" style="font-family: 'Mountains of Christmas', serif; font-weight: 700;font-style: normal;">@2025 Student System. All right reserved.</h6>
+            </div>
+        </div> -->
+
+    </div>
+       
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
-
-</body>
+  </body>
 </html>
