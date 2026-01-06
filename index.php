@@ -32,20 +32,25 @@
 
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
                         <li class="nav-item pe-lg-4">
-                            <a class="nav-link fw-bold" href="#home">Home</a>
+                            <a class="nav-link fw-bold active" href="index.php">Home</a>
                         </li>
                          <li class="nav-item pe-lg-4">
-                            <a class="nav-link fw-bold" href="#about">About</a>
+                            <a class="nav-link fw-bold" href="class.php">Class</a>
                         </li>
                         <li class="nav-item pe-lg-4">
-                            <a class="nav-link fw-bold" href="#course">Course</a>
+                            <a class="nav-link fw-bold" href="course.php">Course</a>
                         </li>
                        
                         <li class="nav-item pe-lg-4">
-                            <a class="nav-link fw-bold" href="#contact">Contact</a>
+                            <a class="nav-link fw-bold" href="contact.php">Contact</a>
                         </li>
                     </ul>
-
+                    <div class="d-flex justify-content-center mt-3 mt-lg-0">
+                        <a href="register.php" class="text-decoration-none">
+                            <span class="fs-6 text-warning ">Register</span>
+                            <i class="fa-solid fa-user fs-6 text-warning btn"></i>
+                        </a>
+                    </div>
                     <div class="d-flex justify-content-center mt-3 mt-lg-0">
                         <a href="login.php" class="text-decoration-none">
                             <span class="fs-6 text-warning ">Login</span>
@@ -121,7 +126,7 @@
     </section>
 
     <!-- course title -->
-    <section id="course">
+    <section>
         <div class="container d-flex justify-content-center">
             <div class="row mb-5">
                 <h1 style="font-family:serif;  font-weight: bold; color:green;">OUR COURSES</h1>
@@ -255,25 +260,28 @@
                       <div class="container">
             <div class="row pt-5">
                 <div class="col-lg-4 md-12 mb-4">
-                    <h5 class="text-white mb-4">STUDENT SYSTEM</h5>
+                    <h5 class="text-warning mb-4">STUDENT SYSTEM</h5>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quibusdam vel quo commodi sunt.</p>
-                    <a href="#contact" class=" btn btn-lg btn-warning btn-rounded px-5 py-3">Inquery <i class="fa-solid fa-envelope me-2"></i></a>
+                    <!-- <a href="#contact" class=" btn btn-lg btn-warning btn-rounded px-5 py-3">Inquery <i class="fa-solid fa-envelope me-2"></i></a> -->
 
                 </div>
                 <div class="col-lg-4 md-12 mb-4">
-                    <h5 class="text-white mb-4">USEFUL LINKS</h5>
+                    <h5 class="text-warning mb-4">USEFUL LINKS</h5>
                     <p>
                         <a href="index.php" class="text-reset  text-decoration-none">Home</a>
                     </p>
                     <p>
-                        <a href="#about" class="text-reset  text-decoration-none">About</a>
+                        <a href="class.php" class="text-reset  text-decoration-none">Class</a>
                     </p>
                     <p>
-                        <a href="#contact" class="text-reset text-decoration-none">Contact</a>
+                        <a href="course.php" class="text-reset  text-decoration-none">Course</a>
+                    </p>
+                    <p>
+                        <a href="contact.php" class="text-reset text-decoration-none">Contact</a>
                     </p>
                 </div>
                 <div class="col-lg-4 md-12 mb-4">
-                    <h5 class="text-white mb-4">CONTACT</h5>
+                    <h5 class="text-warning mb-4">CONTACT</h5>
                     <p>
                         <i class="fa-solid fa-house me-2"></i>
                         <span class="me-5">No.(575), Pyay Road, Kamayut Township,  </span>
@@ -301,6 +309,7 @@
        
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> 
+
   </body>
 </html>

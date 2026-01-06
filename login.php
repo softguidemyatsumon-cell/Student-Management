@@ -21,26 +21,32 @@ if (isset($_POST['login'])) {
 
         // Note: Using variables directly in SQL is prone to SQL Injection. 
         // For a production app, use Prepared Statements.
-        $sql = "SELECT * FROM login WHERE username = '$username' AND password ='$password'";
+        $sql = "SELECT * FROM users WHERE name = '$username' AND password ='$password'";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        
+        //  if(mysqli_query($conn,$sql)){
+        //     header("location:contact.php");
+        // }else{
+        //     echo "Query Failed..." .mysqli_error($conn);
+        // }
 
         if ($row) { // This check fixes the "null" error
-
             $_SESSION['username'] = $username;
             $_SESSION['role'] = $row['role'];
          
             if ($row['role'] == "admin") {
-                header("location:admin/admin_dashboard.php");
+                header("location:admin_dashboard.php");
             } else if ($row['role'] == "teacher") {
-                header("location:teacher/teacher_dashboard.php");
+                header("location:teacher_dashboard.php");
             } else if ($row['role'] == "student") {
-                header("location:student/student_dashboard.php");
+                header("location:student_dashboard.php");
             }
+            exit();
         } else {
-            // $loginError = "Invalid Username or Password!";
-            // echo "$loginError";
-            echo "<h6  class='alert alert-danger' role='alert'>Login Failed! Try Again</h6>";
+             $loginError = "Invalid Username or Password!";
+            // // echo "$loginError";
+            // echo "<h6  class='alert alert-danger' role='alert'>Login Failed! Try Again</h6>";
         }
     }
 }
@@ -67,6 +73,10 @@ if (isset($_POST['login'])) {
    <form method="post" class="login-box p-4">
     <h2 class="text-center mb-4">Account Login</h2>
 
+        <?php if($loginError): ?>
+        <div class="alert alert-danger"><?php echo $loginError; ?></div>
+    <?php endif; ?>
+
     <div class="mb-3">
       <label class="form-label">Username</label>
       <input type="text" class="form-control" placeholder="Enter username" name="username">
@@ -75,7 +85,7 @@ if (isset($_POST['login'])) {
 
     <div class="mb-3">
       <label class="form-label">Password</label>
-      <input type="password" class="form-control" placeholder="Enter password" name="password">
+      <input type="password" class="form-control" placeholder="Enter Password" name="password">
       <span class="text-danger"><?php echo $errorPassword?></span>
     </div>
 

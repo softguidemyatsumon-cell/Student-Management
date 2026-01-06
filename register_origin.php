@@ -2,17 +2,18 @@
     require_once("./db_connection.php");
     if(isset($_POST['register'])){
         $name = $_POST['username'];
+        $phone = $_POST['phone'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
-        $confirmPassword = $_POST['confirmPassword'];
+        $role =$_POST['role'];
+        // $confirmPassword = $_POST['confirmPassword'];
 
-        $passwordhash = password_hash($password, PASSWORD_DEFAULT);
+        // $passwordhash = password_hash($password, PASSWORD_DEFAULT);
         // $confirmPasswordhash = password_hash($confirmPassword, PASSWORD_DEFAULT);
         
 
-        $sql = "INSERT INTO register (username, email, password, confirmPassword)VALUES('$name','$email','$passwordhash', '$confirmPassword')";
+        $sql = "INSERT INTO register (name, phone, email, role)VALUES('$name','$phone','$email', '$role')";
         if(mysqli_query($conn,$sql)){
-            header("location:student_table.php");
+            header("location:login.php");
         }else{
             echo "Query Failed..." .mysqli_error($conn);
         }
@@ -43,19 +44,28 @@
         </div>
 
         <div class="mb-3">
+          <label class="form-label">Phone</label>
+          <input type="text" class="form-control" placeholder="Enter username" name="phone" required>
+        </div>
+
+        <div class="mb-3">
           <label class="form-label">Email</label>
-          <input type="text" class="form-control" placeholder="Enter username" name="email" required>
+          <input type="email" class="form-control" placeholder="Enter password" name="email" required>
         </div>
 
-        <div class="mb-3">
-          <label class="form-label">Password</label>
-          <input type="password" class="form-control" placeholder="Enter password" name="password" required>
+         <div class="mb-3">
+          <label class="form-label">Role</label>
+          <select name="role" id="" class="form-select">
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+          </select>
         </div>
 
-        <div class="mb-3">
-          <label class="form-label">Confirm Password</label>
+        <!-- <div class="mb-3">
+          <label class="form-label"></label>
           <input type="password" class="form-control" placeholder="Enter password" name="confirmPassword" required>
-        </div>
+        </div> -->
 
         <button type="submit" class="btn btn-primary w-100" name="register">Register</button>
     </form>
